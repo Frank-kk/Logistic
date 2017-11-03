@@ -66,43 +66,6 @@ def stocGradAscent1(dataMat, labelMat): #改进版随机梯度上升，在每次
     return weights
 
 
-def step_gradient(dataMat, labelMat):
-    dataMatrix=np.mat(dataMat) #将读取的数据转换为矩阵
-    classLabels=np.mat(labelMat).transpose() #将读取的数据转换为矩阵
-    m,n = np.shape(dataMatrix)
-    alpha = 0.001  #设置梯度的阀值，该值越大梯度上升幅度越大
-    maxCycles = 500 #设置迭代的次数，一般看实际数据进行设定，有些可能200次就够了
-    weights = np.ones((n,1)) #设置初始的参数，并都赋默认值为1。注意这里权重以矩阵形式表示三个参数。
-    for k in range(maxCycles):
-        h = sigmoid(dataMatrix*weights)
-        gradient+=
-        weights = weights - alpha * dataMatrix*w_gradient #迭代更新权重
-    return weights
-    for i in range(0,len(points)):
-        x=points[i,0]
-        y=points[i,1]
-        b_gradient+=(((w_current*x)+b_current)-y)
-        w_gradient+=(((w_current*x)+b_current)-y)*x
-    new_b=b_current-(alpha*b_gradient)
-    new_w=w_current-(alpha*w_gradient)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def plotBestFit(weights):  #画出最终分类的图
     import matplotlib.pyplot as plt
